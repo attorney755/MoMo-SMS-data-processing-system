@@ -1,0 +1,8 @@
+lxml
+python-dateutil
+pydantic
+fastapi
+uvicorn[standard]
+sqlite-utils
+pytest
+sqlalchemy
