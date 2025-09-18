@@ -3,7 +3,6 @@
 ## Team Members
 - Valois Niyigaba
 - Prudence Tracey Browns
-- Grace Umwari
 - Samuel Niyonkuru
 
 ## Project Description
