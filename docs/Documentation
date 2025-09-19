@@ -10,4 +10,4 @@ At first, we thought about adding a User_Transaction_Roles table, but we realize
 
 We design data in a clean and organized fashion hence fast queries. It is also in a position to expand, i.e. it is capable of supporting additional users and transactions in future. We worked on ensuring it is easy to follow and maintain so that it functions at the moment and could enhance it in the future.
 
-In general, this database is effective, dependable, and a future-oriented database. It would be ideal with MoMo SMS now and tomorrow.
+In general, this database is effective, dependable, and a future-oriented database. It would be ideal with MoMo SMS right now and in the future.

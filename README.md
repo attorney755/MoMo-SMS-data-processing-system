@@ -41,6 +41,24 @@ Our architecture is based on an **ETL pipeline + database + frontend dashboard**
 
 [VIEW our draft Architecture Diagram HERE!](https://drive.google.com/file/d/16Aut1PggC4ixzqP85awJLTl4BbRlYdfn/view?usp=sharing)
 
+## Our Database Design
+.
+The MoMo SMS database is designed to capture, classify, and analyze mobile money transactions from SMS data.   
+
+### Entities
+- **Users** → Stores the users' details like their name, phone, email and account status.  
+- **Categories** → For classifying payments. 
+- **Transactions** → For all the transactions made by the users.   
+
+### Constraints
+- PK and FK relationships  
+- Unique constraints
+- Check constraints 
+- Cascading rules
+
+### Indexing
+- Transactions are indexed by `time`, `sender_id`, `receiver_id`, and `category_id` to support analytics.   
+
 # Scrum Board
 We are using GitHub Projects to manage our tasks. 
 We have created 3 columns on our board where we put our completed, in progress and to do lists.
