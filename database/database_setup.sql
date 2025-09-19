@@ -46,7 +46,7 @@ CREATE TABLE transactions (
   category_id INT NOT NULL COMMENT 'FK to transaction_categories',
   sender_id INT NOT NULL COMMENT 'FK to users_customers: the payer/sender',
   receiver_id INT NOT NULL COMMENT 'FK to users_customers: the payee/receiver',
-  time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Timestamp of the transaction',
+  timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Timestamp of the transaction',
   status ENUM('pending','completed','failed','reversed') NOT NULL DEFAULT 'completed' COMMENT 'Processing state of the transaction',
   reference VARCHAR(64) NULL COMMENT 'Provider reference or SMS reference id',
   note VARCHAR(255) NULL COMMENT 'Optional free-text note parsed from SMS',
