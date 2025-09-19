@@ -9,33 +9,8 @@
 In this group project, we are creating an enterprise level fullstack application to process MoMo SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend for analysis and visualization.
 
 # Repository Structure
- Here's our repository structure as per week 2
- MoMo-SMS-data-processing-system/
-│
-├──/data/
-│   ├──logs
-│   ├──processed
-|   └──raw
-|
-├── /docs/                               
-│   ├── erd_diagram.pdf                
-│   └── Documentation             
-│
-├── /database/
-│   └── database_setup.sql    
-│
-├── /examples/
-│   ├── user.json
-│   ├── transaction.json
-│   └── category.json
-│
-├── /etl/
-├── /api/
-├── /web/
-├── /tests/
-├── /scripts/
-│
-└── README.md
+ ![Repository structure](./docs/Screenshot%202025-09-19%20184604.png)
+
 
 # System Architecture
 
