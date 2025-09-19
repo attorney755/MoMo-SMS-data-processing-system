@@ -1,0 +1,13 @@
+Documentation about our MoMo-SMS-data-processing-system
+
+Our MoMo SMS database will be easy, powerful and easy to scale. It is a four table database (Users, Transactions, TransactionCategories, and SystemLogs).
+
+The Users table stores all user information in one place. This avoids repeating data and keeps everything neat. The Transactions table links to the Users table using sender_id and receiver_id. This ensures every transaction is between real users, so no fake or lost transactions happen.
+
+The Transaction_Categories table helps sort transactions into types, like payments or transfers. This makes it easier to create reports and analyze data. The System_Logs table keeps track of all transaction events. This helps us monitor activity, fix problems, and keep everything secure.
+
+At first, we thought about adding a User_Transaction_Roles table, but we realized it wasn’t needed. Instead, we directly connected senders and receivers in the Transactions table. This made the design simpler and more efficient.
+
+We design data in a clean and organized fashion hence fast queries. It is also in a position to expand, i.e. it is capable of supporting additional users and transactions in future. We worked on ensuring it is easy to follow and maintain so that it functions at the moment and could enhance it in the future.
+
+In general, this database is effective, dependable, and a future-oriented database. It would be ideal with MoMo SMS now and tomorrow.
