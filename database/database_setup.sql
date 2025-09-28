@@ -41,19 +41,20 @@ CREATE TABLE transaction_categories (
 
 -- Transactions (core facts)
 CREATE TABLE `Transactions` (
-  `transaction_id` int,
-  `amount` decimal,
-  `category_id` int,
-  `sender_id` varchar,
-  `receiver_id` varchar,
-  `timestamp` datetime,
-  `fee` decimal,
-  `new_balance` decimal,
-  `message` varchar,
-  `financial_transaction_id` int,
-  `external_transaction_id` int,
-  `service_center` varchar,
-  PRIMARY KEY (`transaction_id`)
+  `transaction_id` VARCHAR(50),
+  `amount` DECIMAL(15, 2),
+  `sender_id` VARCHAR(20),
+  `receiver_id` VARCHAR(20),
+  `timestamp` DATETIME,
+  `fee` DECIMAL(15, 2),
+  `new_balance` DECIMAL(15, 2),
+  `message` VARCHAR(255),
+  `financial_transaction_id` VARCHAR(50),
+  `external_transaction_id` VARCHAR(50),
+  `service_center` VARCHAR(20),
+  `transaction_type` VARCHAR(20),
+  `readable_date` VARCHAR(50),
+  PRIMARY KEY (`financial_transaction_id`)
 );
 
 -- System Logs (ETL/processing events)
