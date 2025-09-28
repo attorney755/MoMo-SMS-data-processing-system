@@ -40,32 +40,21 @@ CREATE TABLE transaction_categories (
 ) COMMENT='Reference data for classifying transactions';
 
 -- Transactions (core facts)
-CREATE TABLE transactions (
-  transaction_id BIGINT NOT NULL AUTO_INCREMENT COMMENT 'Primary key for each MoMo transaction',
-  amount DECIMAL(15,2) NOT NULL COMMENT 'Monetary amount of the transaction in GHS (or configured currency)',
-  category_id INT NOT NULL COMMENT 'FK to transaction_categories',
-  sender_id INT NOT NULL COMMENT 'FK to users_customers: the payer/sender',
-  receiver_id INT NOT NULL COMMENT 'FK to users_customers: the payee/receiver',
-  timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Timestamp of the transaction',
-  status ENUM('pending','completed','failed','reversed') NOT NULL DEFAULT 'completed' COMMENT 'Processing state of the transaction',
-  reference VARCHAR(64) NULL COMMENT 'Provider reference or SMS reference id',
-  note VARCHAR(255) NULL COMMENT 'Optional free-text note parsed from SMS',
-  PRIMARY KEY (transaction_id),
-  KEY idx_tx_time (time),
-  KEY idx_tx_sender_time (sender_id, time),
-  KEY idx_tx_receiver_time (receiver_id, time),
-  KEY idx_tx_category (category_id),
-  CONSTRAINT fk_tx_category
-    FOREIGN KEY (category_id) REFERENCES transaction_categories(category_id)
-    ON UPDATE CASCADE ON DELETE RESTRICT,
-  CONSTRAINT fk_tx_sender
-    FOREIGN KEY (sender_id) REFERENCES users_customers(user_id)
-    ON UPDATE CASCADE ON DELETE RESTRICT,
-  CONSTRAINT fk_tx_receiver
-    FOREIGN KEY (receiver_id) REFERENCES users_customers(user_id)
-    ON UPDATE CASCADE ON DELETE RESTRICT,
-  CONSTRAINT chk_tx_amount_positive CHECK (amount > 0)
-) COMMENT='Main MoMo transaction records';
+CREATE TABLE `Transactions` (
+  `transaction_id` int,
+  `amount` decimal,
+  `category_id` int,
+  `sender_id` varchar,
+  `receiver_id` varchar,
+  `timestamp` datetime,
+  `fee` decimal,
+  `new_balance` decimal,
+  `message` varchar,
+  `financial_transaction_id` int,
+  `external_transaction_id` int,
+  `service_center` varchar,
+  PRIMARY KEY (`transaction_id`)
+);
 
 -- System Logs (ETL/processing events)
 CREATE TABLE system_logs (
