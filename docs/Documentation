@@ -1,6 +1,6 @@
 Documentation about our MoMo-SMS-data-processing-system
 
-Our MoMo SMS database will be easy, powerful and easy to scale. It is a four table database (Users, Transactions, TransactionCategories, and SystemLogs).
+In general our MoMo SMS database will be easy,and powerful. It is a four table database (Users, Transactions, TransactionCategories, and SystemLogs).
 
 The Users table stores all user information in one place. This avoids repeating data and keeps everything neat. The Transactions table links to the Users table using sender_id and receiver_id. This ensures every transaction is between real users, so no fake or lost transactions happen.
 
