@@ -1,4 +1,3 @@
-```markdown
 # Team-Setup-and-Project-Planning
 
 ## Team Members
@@ -35,7 +34,7 @@ The server will start on `http://localhost:8080` with these credentials:
 ### 4. Verify Installation
 Test the API with:
 ```bash
-curl -u team2:alu%40123 http://localhost:8080/transactions
+curl --user team2:alu%40123 http://localhost:8080/transactions
 ```
 
 ### 5. (Optional) Run DSA Comparison
@@ -111,5 +110,3 @@ For complete API documentation including:
 - Error codes
 
 See: [API Documentation](docs/api_docs.md)
-
-```
