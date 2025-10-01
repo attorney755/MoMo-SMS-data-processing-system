@@ -1,5 +1,3 @@
-Here's your updated **README.md** with integrated setup instructions while preserving all your existing content. I've maintained your structure and added the setup section naturally:
-
 ```markdown
 # Team-Setup-and-Project-Planning
 
@@ -14,42 +12,42 @@ In this group project, we are creating an enterprise level fullstack application
 ## Repository Structure
 ![Repository structure](./docs/Screenshot%202025-09-19%20184604.png)
 
-### Setup Instructions
+## Setup Instructions
 
-#### 1. Prerequisites
+### 1. Prerequisites
 - Python 3.11+
 - `curl` for API testing
 
-#### 2. Clone Repository
+### 2. Clone Repository
 ```bash
 git clone https://github.com/attorney755/MoMo-SMS-data-processing-system.git
 cd MoMo-SMS-data-processing-system
 ```
 
-#### 3. Run the API Server
+### 3. Run the API Server
 ```bash
 python api/server.py
 ```
 The server will start on `http://localhost:8080` with these credentials:
-- **Username:** `team2`
-- **Password:** `alu@123`
+- Username: `team2`
+- Password: `alu@123`
 
-#### 4. Verify Installation
+### 4. Verify Installation
 Test the API with:
 ```bash
 curl -u team2:alu%40123 http://localhost:8080/transactions
 ```
 
-#### 5. (Optional) Run DSA Comparison
+### 5. (Optional) Run DSA Comparison
 ```bash
 cd dsa
 python search_comparison.py
 ```
 
 ## System Architecture
-Our architecture is based on an **ETL pipeline + database + frontend dashboard**, with an optional API layer.
+Our architecture is based on an ETL pipeline + database + frontend dashboard, with an optional API layer.
 
-🔹 **Flow**:
+### Flow:
 1. **Input Layer**
    - Receives XML data (MoMo SMS)
    - Handles initial input and validation
@@ -74,13 +72,13 @@ Our architecture is based on an **ETL pipeline + database + frontend dashboard**
 
 [VIEW our draft Architecture Diagram HERE!](https://drive.google.com/file/d/16Aut1PggC4ixzqP85awJLTl4BbRlYdfn/view?usp=sharing)
 
-## Our Database Design
+## Database Design
 Our MoMo SMS database is designed to capture, classify, and analyze mobile money transactions from SMS data.
 
 ### Entities
-- **Users** → Stores users' details (name, phone number, email, account status)
-- **Categories** → For classifying payments
-- **Transactions** → For all transactions made by users
+- **Users**: Stores users' details (name, phone number, email, account status)
+- **Categories**: For classifying payments
+- **Transactions**: For all transactions made by users
 
 ### Constraints
 - Primary Key and Foreign Key relationships
@@ -99,10 +97,11 @@ We are using GitHub Projects to manage our tasks with three columns:
 
 [View Our Scrum Board Here!](https://github.com/users/attorney755/projects/3)
 
-## Reports
+## Reports and Documentation
 Find our complete documentation and reports in:
-- `docs/api_docs.md`
-- `MoMo_API_Report.pdf` / `MoMo_API_Report.docx`
+- `docs/api_docs.md` - API endpoint documentation
+- `MoMo_API_Report.pdf` - Complete project report
+- `MoMo_API_Report.docx` - Editable report version
 
 ## API Documentation
 For complete API documentation including:
@@ -112,3 +111,5 @@ For complete API documentation including:
 - Error codes
 
 See: [API Documentation](docs/api_docs.md)
+
+```
