@@ -10,6 +10,13 @@ In this group project, we are creating an enterprise level fullstack application
 
 # Repository Structure
  ![Repository structure](./docs/Screenshot%202025-09-19%20184604.png)
+### Setup Instructions
+#### 1.Clone Repository
+git clone https://github.com/attorney755/MoMo-SMS-data-processing-system.git
+cd MoMo-SMS-data-processing-system
+
+#### 2.Run the API
+python api/server.py
 
 
 # System Architecture
@@ -62,3 +69,11 @@ Our MoMo SMS database is designed to capture, classify, and analyze mobile money
 We are using GitHub Projects to manage our tasks. 
 We have created 3 columns on our board where we put our completed, in progress and to do lists.
 [View Our Scrum Board Here!](https://github.com/users/attorney755/projects/3>)
+
+# Report
+
+Find the full written report:
+
+docs/api_docs.md
+
+MoMo_API_Report.pdf / MoMo_API_Report.docx
