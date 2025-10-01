@@ -74,6 +74,6 @@ We have created 3 columns on our board where we put our completed, in progress a
 
 Find the full written report:
 
-docs/api_docs.md
+`docs`/`api_docs.md`
 
-MoMo_API_Report.pdf / MoMo_API_Report.docx
+`MoMo_API_Report.pdf` / `MoMo_API_Report.docx`
