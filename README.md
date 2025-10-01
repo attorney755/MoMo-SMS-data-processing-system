@@ -1,3 +1,6 @@
+Here's your updated **README.md** with integrated setup instructions while preserving all your existing content. I've maintained your structure and added the setup section naturally:
+
+```markdown
 # Team-Setup-and-Project-Planning
 
 ## Team Members
@@ -8,72 +11,104 @@
 ## Project Description
 In this group project, we are creating an enterprise level fullstack application to process MoMo SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend for analysis and visualization.
 
-# Repository Structure
- ![Repository structure](./docs/Screenshot%202025-09-19%20184604.png)
+## Repository Structure
+![Repository structure](./docs/Screenshot%202025-09-19%20184604.png)
+
 ### Setup Instructions
-#### 1.Clone Repository
+
+#### 1. Prerequisites
+- Python 3.11+
+- `curl` for API testing
+
+#### 2. Clone Repository
+```bash
 git clone https://github.com/attorney755/MoMo-SMS-data-processing-system.git
 cd MoMo-SMS-data-processing-system
+```
 
-#### 2.Run the API
+#### 3. Run the API Server
+```bash
 python api/server.py
+```
+The server will start on `http://localhost:8080` with these credentials:
+- **Username:** `team2`
+- **Password:** `alu@123`
 
+#### 4. Verify Installation
+Test the API with:
+```bash
+curl -u team2:alu%40123 http://localhost:8080/transactions
+```
 
-# System Architecture
+#### 5. (Optional) Run DSA Comparison
+```bash
+cd dsa
+python search_comparison.py
+```
 
-Our architecture is based on an **ETL pipeline + database + frontend dashboard**, with an optional API layer.  
+## System Architecture
+Our architecture is based on an **ETL pipeline + database + frontend dashboard**, with an optional API layer.
 
-   🔹 Flow
+🔹 **Flow**:
 1. **Input Layer**
-   - Receives XML data (MoMo SMS).
-   - Handles initial input and validation.
+   - Receives XML data (MoMo SMS)
+   - Handles initial input and validation
 
 2. **ETL Pipeline**
-   - Parse: To extract transaction records from XML.
-   - Clean: Normalize dates, amounts, and phone numbers.
-   - Categorize: Classify transactions (deposit, withdrawal, transfer).
-   - Load: Insert cleaned and categorized data into SQLite.
+   - Parse: Extracts transaction records from XML
+   - Clean: Normalizes dates, amounts, and phone numbers
+   - Categorize: Classifies transactions (deposit, withdrawal, transfer)
+   - Load: Inserts cleaned data into SQLite
 
 3. **Database Layer**
-   - Stores normalized and categorized transactions in SQLite.
-   - Provides structured queries for analytics.
+   - Stores normalized transactions in SQLite
+   - Provides structured queries for analytics
 
 4. **Frontend Dashboard**
-   - Reads processed JSON/DB data.
-   - Visualizes transactions using charts and tables.
+   - Reads processed JSON/DB data
+   - Visualizes transactions using charts and tables
 
 5. **Optional FastAPI Backend**
-   - Provides API endpoints 
+   - Provides API endpoints
    - Serves data to frontend or external systems
 
 [VIEW our draft Architecture Diagram HERE!](https://drive.google.com/file/d/16Aut1PggC4ixzqP85awJLTl4BbRlYdfn/view?usp=sharing)
 
 ## Our Database Design
-Our MoMo SMS database is designed to capture, classify, and analyze mobile money transactions from SMS data.   
+Our MoMo SMS database is designed to capture, classify, and analyze mobile money transactions from SMS data.
 
 ### Entities
-- **Users** → Stores the users' details like their name, phone number, email and account status.  
-- **Categories** → For classifying payments. 
-- **Transactions** → For all the transactions made by the users.   
+- **Users** → Stores users' details (name, phone number, email, account status)
+- **Categories** → For classifying payments
+- **Transactions** → For all transactions made by users
 
 ### Constraints
-- PK and FK relationships  
+- Primary Key and Foreign Key relationships
 - Unique constraints
-- Check constraints 
+- Check constraints
 - Cascading rules
 
 ### Indexing
-- Transactions are indexed by `time`, `sender_id`, `receiver_id`, and `category_id` to support analytics.   
+Transactions are indexed by `time`, `sender_id`, `receiver_id`, and `category_id` to support analytics.
 
-# Scrum Board
-We are using GitHub Projects to manage our tasks. 
-We have created 3 columns on our board where we put our completed, in progress and to do lists.
-[View Our Scrum Board Here!](https://github.com/users/attorney755/projects/3>)
+## Scrum Board
+We are using GitHub Projects to manage our tasks with three columns:
+- Completed
+- In Progress
+- To Do
 
-# Report
+[View Our Scrum Board Here!](https://github.com/users/attorney755/projects/3)
 
-Find the full written report:
+## Reports
+Find our complete documentation and reports in:
+- `docs/api_docs.md`
+- `MoMo_API_Report.pdf` / `MoMo_API_Report.docx`
 
-`docs`/`api_docs.md`
+## API Documentation
+For complete API documentation including:
+- Endpoint specifications
+- Authentication details
+- Request/response examples
+- Error codes
 
-`MoMo_API_Report.pdf` / `MoMo_API_Report.docx`
+See: [API Documentation](docs/api_docs.md)
