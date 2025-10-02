@@ -1,9 +1,10 @@
 # Team-Setup-and-Project-Planning
 
 ## Team Members
-- Valois Niyigaba
+- Attorney Valois Niyigaba
 - Prudence Tracey Browns
 - Samuel Niyonkuru
+- Ngarambe David
 
 ## Project Description
 In this group project, we are creating an enterprise level fullstack application to process MoMo SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend for analysis and visualization.
